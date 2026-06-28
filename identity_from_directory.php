@@ -33,7 +33,7 @@ class identity_from_directory extends rcube_plugin
      */
     public function login_after($args)
     {
-        $this->load_config('config.inc.php.dist'); // load the plugin's distribution config file as default
+        //$this->load_config('config.inc.php.dist'); // load the plugin's distribution config file as default
         $this->load_config(); // merge with local configuration file (which can overwrite any settings)
         if ($this->ldap) {
             return $args;
@@ -342,7 +342,7 @@ class identity_from_directory extends rcube_plugin
 
         // Get config and set some fallback / default values
         // See this plugin's config.php.dist for a detailled description of the settings
-        $this->load_config('config.inc.php.dist'); // load the plugin's distribution config file as default
+        // $this->load_config('config.inc.php.dist'); // load the plugin's distribution config file as default
         $this->load_config(); // merge with local configuration file (which can overwrite any settings)
 
         $debug_plugin = (bool) $this->rc->config->get('identity_from_directory_debug');
